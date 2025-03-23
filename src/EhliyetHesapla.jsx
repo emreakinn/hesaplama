@@ -9,8 +9,8 @@ function EhliyetHesapla() {
     const handleHesapla = () => {
         const dogruSayiNumber = parseFloat(dogruSayi)
         if (!isNaN(dogruSayiNumber) && dogruSayiNumber > 0 && dogruSayiNumber <= 50) {
-            if (dogruSayi * 2 >= 70) {
-                setPuan(dogruSayi * 2)
+            setPuan(dogruSayiNumber * 2)
+            if (dogruSayiNumber * 2 >= 70) {
                 setSonuc('Ehliyet alabilirsiniz')
             } else {
                 setSonuc('Ehliyet alamazsınız')
@@ -18,13 +18,14 @@ function EhliyetHesapla() {
         } else {
             setSonuc('Lütfen 0-50 arasında değer girin')
         }
+        setDogruSayi('')
     }
 
 
     return (
         <div className='w-full h-[90vh] flex justify-center items-center bg-blue-900 text-white'>
             <div className='w-6/12 h-4/6 bg-blue-800 border-2 border-blue-400 rounded-lg flex gap-5 flex-col items-center justify-center'>
-                <h1 className='text-2xl'>Doğru Sayısı</h1>
+                <h1 className='text-2xl'>Ehliyet</h1>
                 <input
                     type="text"
                     placeholder='0-50'
