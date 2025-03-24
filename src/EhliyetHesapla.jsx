@@ -8,7 +8,7 @@ function EhliyetHesapla() {
 
     const handleHesapla = () => {
         const dogruSayiNumber = parseFloat(dogruSayi)
-        if (!isNaN(dogruSayiNumber) && dogruSayiNumber > 0 && dogruSayiNumber <= 50) {
+        if (dogruSayiNumber > 0 && dogruSayiNumber <= 50) {
             setPuan(dogruSayiNumber * 2)
             if (dogruSayiNumber * 2 >= 70) {
                 setSonuc('Ehliyet alabilirsiniz')
@@ -27,7 +27,7 @@ function EhliyetHesapla() {
             <div className='w-6/12 h-4/6 bg-blue-800 border-2 border-blue-400 rounded-lg flex gap-5 flex-col items-center justify-center'>
                 <h1 className='text-2xl'>Ehliyet</h1>
                 <input
-                    type="text"
+                    type="number"
                     placeholder='0-50'
                     className='w-3/12 py-5 border-2 border-blue-400 rounded-lg pl-2 text-xl text-center outline-none'
                     value={dogruSayi}

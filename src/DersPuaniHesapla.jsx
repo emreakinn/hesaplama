@@ -24,8 +24,7 @@ function DersPuaniHesapla() {
         const p1 = parseFloat(proje1);
         const p2 = parseFloat(proje2);
 
-        if (!isNaN(s1) && !isNaN(s2) && !isNaN(s3) && !isNaN(s4) &&
-            !isNaN(p1) && !isNaN(p2)) {
+        if (s1 && s2 && s3 && s4 && p1 && p2) {
             if (
                 s1 < 0 || s1 > 100 ||
                 s2 < 0 || s2 > 100 ||
@@ -34,7 +33,7 @@ function DersPuaniHesapla() {
                 p1 < 0 || p1 > 100 ||
                 p2 < 0 || p2 > 100
             ) {
-                alert('0-100 aralığında not giriniz');
+                setSonuc('0-100 aralığında not giriniz');
             } else {
                 const sinavOrtHesap = (s1 + s2 + s3 + s4) / 4;
                 const projeOrtHesap = (p1 + p2) / 2;
@@ -46,7 +45,7 @@ function DersPuaniHesapla() {
                 setSonuc(genelOrt);
             }
         } else {
-            alert('Lütfen geçerli bir sayı girin');
+            setSonuc('Lütfen bütün bilgileri doldurunuz');
         }
 
         setSinav1('');
