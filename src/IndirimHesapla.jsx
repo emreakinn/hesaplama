@@ -7,7 +7,9 @@ function IndirimHesapla() {
 
     const [selected, setSelected] = useState('')
 
-    console.log(selected)
+    const [indirimliFiyat, setIndirimliFiyat] = useState('')
+    const [normalFiyat, setNormalFiyat] = useState('')
+    const [indirimOrani, setIndirimOrani] = useState('')
 
     return (
         <div className='w-full h-[90vh] flex justify-center items-center bg-blue-900 text-white'>
@@ -25,15 +27,30 @@ function IndirimHesapla() {
                 </select>
                 {
                     selected === 'indirimliFiyat' &&
-                    <IndirimliFiyat />
+                    <IndirimliFiyat
+                        normalFiyat={normalFiyat}
+                        setNormalFiyat={setNormalFiyat}
+                        indirimOrani={indirimOrani}
+                        setIndirimOrani={setIndirimOrani}
+                    />
                 }
                 {
                     selected === 'normalFiyat' &&
-                    <NormalFiyat />
+                    <NormalFiyat
+                        indirimliFiyat={indirimliFiyat}
+                        setIndirimliFiyat={setIndirimliFiyat}
+                        indirimOrani={indirimOrani}
+                        setIndirimOrani={setIndirimOrani}
+                    />
                 }
                 {
                     selected === 'indirimOrani' &&
-                    <IndirimOrani />
+                    <IndirimOrani
+                        normalFiyat={normalFiyat}
+                        setNormalFiyat={setNormalFiyat}
+                        indirimliFiyat={indirimliFiyat}
+                        setIndirimliFiyat={setIndirimliFiyat}
+                    />
                 }
             </div>
         </div >
