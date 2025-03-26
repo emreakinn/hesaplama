@@ -6,6 +6,7 @@ import Navbar from './components/Navbar.jsx'
 import EhliyetHesapla from './EhliyetHesapla.jsx'
 import DersPuaniHesapla from './DersPuaniHesapla.jsx'
 import IndirimHesapla from './IndirimHesapla.jsx'
+import ZamHesapla from './ZamHesapla.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -15,6 +16,7 @@ createRoot(document.getElementById('root')).render(
       <Route path="EhliyetHesapla" element={<EhliyetHesapla />} />
       <Route path="DersPuaniHesapla" element={<DersPuaniHesapla />} />
       <Route path="IndirimHesapla" element={<IndirimHesapla />} />
+      <Route path="ZamHesapla" element={<ZamHesapla />} />
     </Routes>
   </BrowserRouter>
 
