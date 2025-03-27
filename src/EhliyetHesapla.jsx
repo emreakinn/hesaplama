@@ -28,7 +28,7 @@ function EhliyetHesapla() {
                 <h1 className='text-2xl'>Ehliyet</h1>
                 <input
                     type="number"
-                    placeholder='0-50'
+                    placeholder='Doğru Sayısı 0-50'
                     className='w-3/12 py-5 border-2 border-blue-400 rounded-lg pl-2 text-xl text-center outline-none'
                     value={dogruSayi}
                     onChange={(e) => setDogruSayi(e.target.value)}

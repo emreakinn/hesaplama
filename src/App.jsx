@@ -9,7 +9,7 @@ function App() {
       <Link className='w-2/10 border-2 border-blue-400 text-white rounded-lg h-[15vh] flex items-center justify-center flex-wrap hover:bg-blue-800' to='DersPuaniHesapla'>DERS NOTU HESAPLA</Link>
       <Link className='w-2/10 border-2 border-blue-400 text-white rounded-lg h-[15vh] flex items-center justify-center flex-wrap hover:bg-blue-800' to='IndirimHesapla'>İNDİRİM HESAPLA</Link>
       <Link className='w-2/10 border-2 border-blue-400 text-white rounded-lg h-[15vh] flex items-center justify-center flex-wrap hover:bg-blue-800' to='ZamHesapla'>ZAM HESAPLA</Link>
-      <Link className='w-2/10 border-2 border-blue-400 text-white rounded-lg h-[15vh] flex items-center justify-center flex-wrap hover:bg-blue-800' to='EhliyetHesapla'>Hesapla</Link>
+      <Link className='w-2/10 border-2 border-blue-400 text-white rounded-lg h-[15vh] flex items-center justify-center flex-wrap hover:bg-blue-800' to='MilKmHesapla'>MİL - KM HESAPLA</Link>
       <Link className='w-2/10 border-2 border-blue-400 text-white rounded-lg h-[15vh] flex items-center justify-center flex-wrap hover:bg-blue-800' to='EhliyetHesapla'>Hesapla</Link>
       <Link className='w-2/10 border-2 border-blue-400 text-white rounded-lg h-[15vh] flex items-center justify-center flex-wrap hover:bg-blue-800' to='EhliyetHesapla'>Hesapla</Link>
       <Link className='w-2/10 border-2 border-blue-400 text-white rounded-lg h-[15vh] flex items-center justify-center flex-wrap hover:bg-blue-800' to='EhliyetHesapla'>Hesapla</Link>
