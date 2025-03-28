@@ -8,6 +8,7 @@ import DersPuaniHesapla from './DersPuaniHesapla.jsx'
 import IndirimHesapla from './IndirimHesapla.jsx'
 import ZamHesapla from './ZamHesapla.jsx'
 import MilKmHesapla from './MilKmHesapla.jsx'
+import KelimeHesapla from './KelimeHesapla.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -19,6 +20,7 @@ createRoot(document.getElementById('root')).render(
       <Route path="IndirimHesapla" element={<IndirimHesapla />} />
       <Route path="ZamHesapla" element={<ZamHesapla />} />
       <Route path="MilKmHesapla" element={<MilKmHesapla />} />
+      <Route path="KelimeHesapla" element={<KelimeHesapla />} />
     </Routes>
   </BrowserRouter>
 
