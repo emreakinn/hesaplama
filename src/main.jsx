@@ -9,6 +9,7 @@ import IndirimHesapla from './IndirimHesapla.jsx'
 import ZamHesapla from './ZamHesapla.jsx'
 import MilKmHesapla from './MilKmHesapla.jsx'
 import KelimeHesapla from './KelimeHesapla.jsx'
+import KarakterHesapla from './KarakterHesapla.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -21,6 +22,7 @@ createRoot(document.getElementById('root')).render(
       <Route path="ZamHesapla" element={<ZamHesapla />} />
       <Route path="MilKmHesapla" element={<MilKmHesapla />} />
       <Route path="KelimeHesapla" element={<KelimeHesapla />} />
+      <Route path="KarakterHesapla" element={<KarakterHesapla />} />
     </Routes>
   </BrowserRouter>
 
