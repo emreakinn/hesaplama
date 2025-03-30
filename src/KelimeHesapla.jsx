@@ -6,10 +6,14 @@ function KelimeHesapla() {
     const [sonuc, setSonuc] = useState('')
 
     const handleClick = () => {
-        const kelimeler = metin.trim().split(/\s+/);
-        const kelimeSayisi = kelimeler.filter(kelime => kelime !== '').length;
-        setSonuc(kelimeSayisi);
-        setMetin('');
+        if (!metin) {
+            alert('Lütfen Bir Metin Girin')
+        } else {
+            const kelimeler = metin.trim().split(/\s+/);
+            const kelimeSayisi = kelimeler.filter(kelime => kelime !== '').length;
+            setSonuc(kelimeSayisi);
+            setMetin('');
+        }
     }
 
     return (

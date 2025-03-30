@@ -8,13 +8,18 @@ function IndirimliFiyat({ normalFiyat, setNormalFiyat, indirimOrani, setIndirimO
     const [IlkIndirimOrani, setIlkIndirimOrani] = useState('')
 
     const handleClick = () => {
-        setSonuc(normalFiyat - (normalFiyat * indirimOrani / 100))
-        setIndirimTutari(normalFiyat * indirimOrani / 100)
-        setIlkIndirimOrani(indirimOrani)
-        setIlkFiyat(normalFiyat)
+        if (!normalFiyat && !indirimOrani) {
+            alert('Tüm Bilgileri Doldurun')
+        } else {
 
-        setNormalFiyat('')
-        setIndirimOrani('')
+            setSonuc(normalFiyat - (normalFiyat * indirimOrani / 100))
+            setIndirimTutari(normalFiyat * indirimOrani / 100)
+            setIlkIndirimOrani(indirimOrani)
+            setIlkFiyat(normalFiyat)
+
+            setNormalFiyat('')
+            setIndirimOrani('')
+        }
     }
 
     return (

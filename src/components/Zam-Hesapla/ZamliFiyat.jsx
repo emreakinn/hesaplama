@@ -8,14 +8,18 @@ function ZamliFiyat({ normalFiyat, setNormalFiyat, zamOrani, setZamOrani }) {
     const [IlkZamOrani, setIlkZamOrani] = useState('')
 
     const handleClick = () => {
-        const norFiyat = Number(normalFiyat)
-        setSonuc(norFiyat + (normalFiyat * zamOrani / 100))
-        setZamTutari(normalFiyat * zamOrani / 100)
-        setIlkZamOrani(zamOrani)
-        setIlkFiyat(normalFiyat)
+        if (!normalFiyat && !zamOrani) {
+            alert('Lütfen Bilgileri Doldurun')
+        } else {
+            const norFiyat = Number(normalFiyat)
+            setSonuc(norFiyat + (normalFiyat * zamOrani / 100))
+            setZamTutari(normalFiyat * zamOrani / 100)
+            setIlkZamOrani(zamOrani)
+            setIlkFiyat(normalFiyat)
 
-        setNormalFiyat('')
-        setZamOrani('')
+            setNormalFiyat('')
+            setZamOrani('')
+        }
     }
 
     return (

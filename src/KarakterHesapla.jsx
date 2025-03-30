@@ -5,9 +5,13 @@ function KarakterHesapla() {
     const [sonuc, setSonuc] = useState('')
 
     const handleClick = () => {
-        const karakterSayi = metin.replace(/\s/g, '').length;
-        setSonuc(karakterSayi);
-        setMetin('');
+        if (!metin) {
+            alert('Lütfen Bir Metin Girin')
+        } else {
+            const karakterSayi = metin.replace(/\s/g, '').length;
+            setSonuc(karakterSayi);
+            setMetin('');
+        }
     }
 
     return (

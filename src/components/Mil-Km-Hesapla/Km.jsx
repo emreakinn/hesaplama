@@ -5,8 +5,13 @@ function Km({ km, setKm }) {
     const [kmDeger, setKmDeger] = useState('')
 
     const handleClick = () => {
-        setKmDeger(km)
-        setSonuc((km / 1.60934).toFixed(2))
+        if (!km) {
+            alert('Lütfen Bilgileri Doldurun')
+        } else {
+            setKmDeger(km)
+            setSonuc((km / 1.60934).toFixed(2))
+            setKm('')
+        }
     }
 
     return (

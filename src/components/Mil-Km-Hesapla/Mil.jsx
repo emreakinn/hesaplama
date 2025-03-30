@@ -6,8 +6,13 @@ function Mil({ mil, setMil }) {
     const [milDeger, setMilDeger] = useState('')
 
     const handleClick = () => {
-        setMilDeger(mil)
-        setSonuc(mil * 1.60934)
+        if (!mil) {
+            alert('Lütfen Bilgileri Doldurun')
+        } else {
+            setMilDeger(mil)
+            setSonuc(mil * 1.60934)
+            setMil('')
+        }
     }
 
     return (

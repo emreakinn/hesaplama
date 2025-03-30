@@ -12,9 +12,14 @@ function KdvHesapla() {
 
 
     const handleClick = () => {
-        setSonuc((tutar - (tutar / radio)).toFixed(2))
-        setKdv((tutar / radio).toFixed(2))
-        setKdvDahil(tutar)
+        if (!tutar) {
+            alert('Lütfen Bir Tutar Girin')
+        } else {
+            setSonuc((tutar - (tutar / radio)).toFixed(2))
+            setKdv((tutar / radio).toFixed(2))
+            setKdvDahil(tutar)
+            setTutar('')
+        }
     }
 
     return (
@@ -33,6 +38,7 @@ function KdvHesapla() {
                 <div className='text-xl'> KDV Hariç Tutar: {sonuc} TL </div>
                 <div className='text-xl'> KDV Tutar: {kdv} TL </div>
                 <div className='text-xl'> KDV Hariç Tutar: {kdvDahil} TL</div>
+                <div className='text-xl'> KDV Oranı: %{radio}</div>
             </div>
         </div>
     )

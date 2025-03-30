@@ -33,7 +33,7 @@ function DersPuaniHesapla() {
                 p1 < 0 || p1 > 100 ||
                 p2 < 0 || p2 > 100
             ) {
-                setSonuc('0-100 aralığında not giriniz');
+                alert('0-100 aralığında not giriniz');
             } else {
                 const sinavOrtHesap = (s1 + s2 + s3 + s4) / 4;
                 const projeOrtHesap = (p1 + p2) / 2;
@@ -45,7 +45,7 @@ function DersPuaniHesapla() {
                 setSonuc(genelOrt);
             }
         } else {
-            setSonuc('Lütfen bütün bilgileri doldurunuz');
+            alert('Lütfen bütün bilgileri doldurunuz');
         }
 
         setSinav1('');

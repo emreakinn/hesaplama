@@ -16,7 +16,7 @@ function EhliyetHesapla() {
                 setSonuc('Ehliyet alamazsınız')
             }
         } else {
-            setSonuc('Lütfen 0-50 arasında değer girin')
+            alert('Lütfen değer girin')
         }
         setDogruSayi('')
     }

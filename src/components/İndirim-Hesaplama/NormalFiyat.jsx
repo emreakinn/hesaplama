@@ -8,14 +8,18 @@ function NormalFiyat({ indirimliFiyat, setIndirimliFiyat, indirimOrani, setIndir
     const [IlkIndirimOrani, setIlkIndirimOrani] = useState('')
 
     const handleClick = () => {
-        const normalFiyat = indirimliFiyat / (1 - indirimOrani / 100)
-        setSonuc(normalFiyat)
-        setIndirimTutari(indirimliFiyat - normalFiyat)
-        setIlkIndirimliFiyat(indirimliFiyat)
-        setIlkIndirimOrani(indirimOrani)
+        if (!indirimliFiyat && !indirimOrani) {
+            alert('Tüm Bilgileri Doldurun')
+        } else {
+            const normalFiyat = indirimliFiyat / (1 - indirimOrani / 100)
+            setSonuc((normalFiyat).toFixed(2))
+            setIndirimTutari((indirimliFiyat - normalFiyat).toFixed(2))
+            setIlkIndirimliFiyat(indirimliFiyat)
+            setIlkIndirimOrani(indirimOrani)
 
-        setIndirimliFiyat('')
-        setIndirimOrani('')
+            setIndirimliFiyat('')
+            setIndirimOrani('')
+        }
     }
 
     return (
